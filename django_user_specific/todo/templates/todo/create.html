@@ -1,0 +1,11 @@
+{% extends "todo/base.html" %}
+{% block content %}
+<h3 style="color: white;">Create a new Todo list!</h3>
+<form method="post" action="/create/">
+	{% csrf_token %}
+	{{form.as_p}}
+	<button type="submit" name="save" class="btn btn-primary">Create</button>
+	
+</form>
+
+{% endblock content %}
